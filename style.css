@@ -1,0 +1,133 @@
+:root{
+--background-color: rgb(5,10,24);
+--border-color: rgb(255, 255, 255, 0.1);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0px;
+    overflow: hidden;
+
+
+}
+
+h1, h2, h3, a, span{
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+.icons{
+height: 50px;
+width: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#logoSection,
+#aboutAndWorkSection{
+flex-basis: calc(100%/3);
+}
+
+#socialsSection,
+#getInTouchSection{
+
+    flex-grow: 1;
+
+
+}
+
+main{
+    flex-grow: 1;
+}
+
+main > article{
+display: grid;
+height: 100%;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 2fr 1fr;
+
+}
+
+.article-description-section{
+    position: relative;
+    color: white;
+    padding: 2rem;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    font-weight: lighter;
+}
+
+.article-description-section > .disc-image{
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+        padding-right: 1rem;
+}
+
+
+.article-image-section{
+  
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/55/997/72/old-building-apartment-brown-wallpaper-preview.jpg");
+}
+
+.article-image-section{
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+main > article > .article-section{
+height: 100%;
+}
+
+.article-nav-section{
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+}
+
+
+#socialsSection{
+    display: flex;
+    gap: 2rem;
+}
+
+#logoSection{
+    justify-content: flex-start;
+    font-size: 2rem;
+}
+
+#logoImage{
+    height: 4rem;
+    width: 4rem;
+}
+
+
+
+.navSection{
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-left: 1px solid var(--border-color);
+    justify-content: center;
+    align-items: center;
+
+}
+
+#navBar{
+display: flex;
+width: 100%;
+border-bottom: 1px solid var(--border-color);
+
+
+}
