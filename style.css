@@ -1,6 +1,7 @@
 :root{
 --background-color: rgb(5,10,24);
 --border-color: rgb(255, 255, 255, 0.1);
+--font-with-opacity: rgb(255, 255, 255, 0.3);
 
 }
 
@@ -20,16 +21,53 @@ body{
 }
 
 h1, h2, h3, a, span{
-    font-family: 'Rubik Wet Paint', cursive;
-    font-size: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 400;
-    color: white;
+    color: var(--font-with-opacity);
 }
 
-.icons{
-height: 50px;
-width: 50px;
+#aboutTextInNavBar{
+    color: rgba(255, 255, 255, 0.614);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+   
 }
+
+
+
+#workTextInNavBar{
+    color: rgba(90, 49, 177, 0.827);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    transition: all 0.2s ease-out;
+}
+
+#aboutTextInNavBar:hover{
+    font-size: 1.8rem;
+}
+
+#workTextInNavBar:hover{
+    font-size: 1.8rem;
+}
+
+
+.icons{
+height: 2rem;
+width: 2rem;
+opacity: 0.4;
+
+transition: all 0.2s;
+
+}
+
+.icons:hover{
+
+    transform: scale(1.5);
+
+}
+
 
 a{
     text-decoration: none;
@@ -40,13 +78,31 @@ a{
 flex-basis: calc(100%/3);
 }
 
+#logoSection{
+    display: flex;
+    gap: 5rem;
+}
+
+
 #socialsSection,
 #getInTouchSection{
 
     flex-grow: 1;
 
+}
+
+#aboutAndWorkSection{
+    display: flex;
+    gap: 7rem;
+}
+
+
+#getInTouchText{
+font-size: 1rem;
 
 }
+
+
 
 main{
     flex-grow: 1;
@@ -63,7 +119,6 @@ grid-template-rows: 2fr 1fr;
 .article-description-section{
     position: relative;
     color: white;
-    padding: 2rem;
     font-size: 2rem;
     line-height: 2.1rem;
     font-weight: lighter;
@@ -72,9 +127,40 @@ grid-template-rows: 2fr 1fr;
 .article-description-section > .disc-image{
         position: absolute;
         bottom: 1rem;
-        left: 2rem;
+        left: 3rem;
         padding-right: 1rem;
+        font-family: 'IBM Plex Mono', monospace;
+        color: rgba(255, 255, 255, 0.467);
 }
+
+#arrowLeft{
+    rotate: 180deg;
+    transition: transform 0.5s ease;
+}
+
+#arrowRight{
+    transition: transform 0.5s ease;
+}
+
+#arrowLeft:hover{
+    transform: translateX(25%);
+}
+
+#arrowRight:hover{
+    transform: translateX(25%);
+}
+
+.arrow{
+    scale: 1.5;
+}
+
+.article-nav-section{
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 .article-image-section{
@@ -99,7 +185,7 @@ height: 100%;
 
 #socialsSection{
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 #logoSection{
@@ -108,8 +194,10 @@ height: 100%;
 }
 
 #logoImage{
-    height: 4rem;
-    width: 4rem;
+    height: 2.3rem;
+    width: 2.3rem;
+    margin-left: 1rem;
+    opacity: 0.7;
 }
 
 
@@ -117,7 +205,7 @@ height: 100%;
 .navSection{
     display: flex;
     gap: 1rem;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0.5rem;
     border-left: 1px solid var(--border-color);
     justify-content: center;
     align-items: center;
